@@ -19,71 +19,71 @@
 	export let loading;
 
 	const categoryTypes = [
-		'Action',
-		'Adventure',
-		'Animation',
-		'Biography',
-		'Comedy',
-		'Crime',
-		'Documentary',
-		'Drama',
-		'Family',
-		'Fantasy',
-		'Film-Noir',
-		'History',
-		'Horror',
-		'Musical',
-		'Mystery',
-		'Romance',
-		'Sci-Fi',
-		'Sport',
-		'Thriller',
-		'War',
-		'Western',
-		'Art-house',
-		'Black-Comedy',
-		'Chick-flick',
-		'Cult-classic',
-		'Dark-Comedy',
-		'Epic',
-		'Erotic',
-		'Experimental',
-		'Fairy-tale',
-		'Film-within-a-film',
-		'Futuristic',
-		'Gangster',
-		'Heist',
-		'Historical',
-		'Holiday',
-		'Indie',
-		'Juvenile',
-		'Melodrama',
-		'Monster',
-		'Political',
-		'Psychological',
-		'Road-movie',
-		'Satire',
-		'Science-Fiction',
-		'Slapstick',
-		'Social-issue',
-		'Superhero',
-		'Surreal',
-		'Teen',
-		'Vampire',
-		'Zombie'
+		'动作',
+		'冒险',
+		'动画',
+		'传记',
+		'喜剧',
+		'犯罪',
+		'纪录片',
+		'剧情',
+		'家庭',
+		'奇幻',
+		'黑色电影',
+		'历史',
+		'恐怖',
+		'音乐',
+		'悬疑',
+		'浪漫',
+		'科幻',
+		'体育',
+		'惊悚',
+		'战争',
+		'西部',
+		'艺术片',
+		'黑色喜剧',
+		'流行影片',
+		'黑帮电影',
+		'黑色幽默',
+		'史诗',
+		'情色',
+		'实验',
+		'童话',
+		'影片中的影片',
+		'未来',
+		'帮派',
+		'抢劫',
+		'历史题材',
+		'假日',
+		'独立制作',
+		'青少年',
+		'悲剧',
+		'怪物',
+		'政治',
+		'心理',
+		'公路电影',
+		'讽刺',
+		'科幻',
+		'闹剧',
+		'社会问题',
+		'超级英雄',
+		'超现实',
+		'青少年',
+		'吸血鬼',
+		'僵尸'
 	];
 
 	let cinemaTypes = [
-		{ value: 'tv show', title: 'TV Show' },
-		{ value: 'movie', title: 'Movie' },
-		{ value: 'tv show or movie', title: 'No Preference' }
+		{ value: '电视剧', title: '电视剧' },
+		{ value: '电影', title: '电影' },
+		{ value: '电视剧或电影', title: '无偏好' }
 	];
 </script>
 
 <div class="pt-6 md:pt-10 text-slate-200">
 	<div>
 		<div class="mb-8">
-			<div class="mb-4 font-semibold text-lg">What kind of cinema are you searching for?</div>
+			<div class="mb-4 font-semibold text-lg">你在寻找什么类型的影视作品？</div>
 			<div class="flex items-center">
 				{#each cinemaTypes as type (type.value)}
 					<button
@@ -101,7 +101,7 @@
 		</div>
 		<div>
 			<div class="mb-4 font-semibold text-lg">
-				Select all categories that you want the show or movie to include.
+				请选择您希望影视作品包含的所有类别。
 			</div>
 			<div class="flex items-center flex-wrap">
 				{#each categoryTypes as category}
@@ -124,12 +124,12 @@
 		</div>
 		<div class="mt-8">
 			<div class="mb-4 font-semibold text-lg">
-				Write any other specifications here. Be as picky as you'd like.
+				在此处写下任何其他规格要求。尽量详细地描述。
 			</div>
 			<textarea
 				bind:value={specificDescriptors}
 				class="bg-white/40 border border-white/0 p-2 rounded-md placeholder:text-slate-800 text-slate-900 w-full h-20 font-medium"
-				placeholder="Ex. Must have at least 2 seasons and be on Netflix or Hulu."
+				placeholder="例如：必须至少有2个季节，可在 Netflix 或 Hulu 上观看。"
 			/>
 			<button
 				on:click
@@ -142,7 +142,7 @@
 				{#if loading}
 					<LoadingIndicator />
 				{:else}
-					<p>Curate My List</p>
+					<p>精选我的列表</p>
 				{/if}
 			</button>
 		</div>
